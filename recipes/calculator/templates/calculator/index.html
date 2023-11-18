@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!-- d:/Django/dj-homeworks/1.2-requests-templates/recipes/calculator/templates/calculator/index.html -->
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Рецепты</title>
+</head>
+<body>
+{% for ingredient, amount in recipe.items %}
+    <p>{{ ingredient }}: {{ amount|floatformat }}</p>
+{% empty %}
+    <p>Такого рецепта не знаю :(</p>
+{% endfor %}
+</body>
+</html>
